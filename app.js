@@ -108,8 +108,7 @@ const arrTweets = [
 ]
     console.log()
 app.post("/sign-up", (req, res)=>{
-    const { avatar } = req.body
-    const { user : username } = req.headers
+    const { avatar, username } = req.body
 
     if(!username || !avatar ){
         res.status(400).send("Todos os campos são obrigatórios")
